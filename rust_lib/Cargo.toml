@@ -1,0 +1,12 @@
+[package]
+name = "test"
+version = "0.1.0"
+authors = ["kwlzn"]
+
+[dependencies]
+
+[lib]
+crate-type = ["dylib"]
+
+[profile.release]
+debug = true
