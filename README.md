@@ -14,4 +14,5 @@ Linux repro for gperftools symbol resolution with python + cffi + rust/c libs.
 # Run
 
     $ cd python-cffi-profiling
-    $ sh run.sh
+    $ sh run-rust.sh
+    $ sh run-c.sh
