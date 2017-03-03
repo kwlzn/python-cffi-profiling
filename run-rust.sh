@@ -25,7 +25,7 @@ if [ ! -e $GPERF_INSTALL_PATH ]; then
 fi
 
 # Execute the cffi integration via pex under care of the profiler.
-LD_PRELOAD="./${GPERF_INSTALL_PATH}/lib/libtcmalloc_and_profiler.so" HEAPPROFILE="${PROFILE_RESULTS_DIR}/profile.out" pex --not-zip-safe --no-wheel cffi -- cffi.py
+LD_PRELOAD="./${GPERF_INSTALL_PATH}/lib/libtcmalloc_and_profiler.so" HEAPPROFILE="${PROFILE_RESULTS_DIR}/profile.out" pex --not-zip-safe --no-wheel cffi -- cffi-rust.py
 
 
 ${GPERF_INSTALL_PATH}/bin/pprof \`which python2.7\` ${PROFILE_RESULTS_DIR}/profile.out.0001.heap
